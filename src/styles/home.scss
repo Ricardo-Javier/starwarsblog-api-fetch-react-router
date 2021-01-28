@@ -1,0 +1,111 @@
+
+.logo{
+    height: 60px;
+    width: 120px;
+}
+
+.wrapper-body{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+.wrapper-card{
+    margin-left: 50px;
+    margin-right: 50px;
+    
+   
+}
+
+.navbar{
+   
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+   scrollbar-width: none;
+}
+ 
+
+  .card {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+     border: solid 3px yellow;
+     margin: 30px 30px;
+     box-sizing: unset;
+     background-color: rgba(245, 245, 245, 0.1);
+     white-space: unset;
+    
+     
+    }
+
+   
+
+
+.btn{
+    background-color: #F7F400;
+    color: black;
+    
+ 
+}
+
+.btn-heart{
+    background-color: #F7F400;
+     position:absolute;
+    left:75%;
+    color: black;
+    font-size: 15px;
+    background-color: #F7F400;
+    padding: 5px;
+    bottom: 7%;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+}
+
+
+.card-body .btn{
+        position: absolute;
+        bottom:7%;
+        left: 10%;
+}
+
+
+.title{
+    margin-top: 60px;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.card-text{
+    text-align: center;
+    white-space: normal;
+    margin-bottom: 10%;
+    
+}
+
+.modal{
+   background-color: rgba(0, 0, 0, 0.3);
+   
+}
+.modal-body{
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+.modal-header{
+    background-color: rgba(0, 0, 0, 0.596);
+}
+.modal-footer{
+    background-color: rgba(0, 0, 0, 0.596);
+}

@@ -2,25 +2,32 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { Modal, Button } from "react-bootstrap";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
-
-			<hr className="my-4" />
-
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
-		</div>
+		<Modal centered className="modal" show={props.show} onHide={props.handleClose}>
+			<Modal.Header className="modal-header" closeButton>
+				<Modal.Title>{props.item.name}</Modal.Title>
+			</Modal.Header>
+			<Modal.Body className="modal-body">{props.description}</Modal.Body>
+			<Modal.Footer className="modal-footer">
+				<Button variant="secondary" onClick={props.handleClose}>
+					Close
+				</Button>
+				<Button variant="primary" onClick={props.handleClose}>
+					Save Changes
+				</Button>
+			</Modal.Footer>
+		</Modal>
 	);
 };
 
 Single.propTypes = {
-	match: PropTypes.object
+	handleClose: PropTypes.func,
+	show: PropTypes.bool,
+	item: PropTypes.object,
+	description: PropTypes.string
 };
